@@ -5,10 +5,24 @@ like this
 {
     "IO":{
         "Opening a file":{
-            "Opening a file in byte read"
+            "Opening a file in byte read":{
+                "py":{
+                    "recommended way":{
+                        "code":"""...""",
+                        "libraries used":[],
+
+                    }
+                },
+                "js":{
+
+                },
+                "rust":{
+
+                }
+            },
         },
         "Writing to a file"{
-
+            "Writing a file in byte write",
         }
     },
     "Algorithms":{},
