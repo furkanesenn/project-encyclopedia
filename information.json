@@ -4,7 +4,7 @@
   "description": "A project to make things a little bit easier for programmers.",
   "authors": "Furkan 'violence' Esen, İhsan 'Notenlish' Çarkcı",
   "database-temporary": {
-    "Number": {
+    "Convert to Number": {
       "func_name": "Number",
       "func_description": "Converts a string to a number.",
       "func_usage": "Number(string/data)",

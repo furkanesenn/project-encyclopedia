@@ -9,8 +9,8 @@ there should also be a request snippet and request tutorial thing
 
 ## Monetisation
 we could gain money from:
-ads, subscriptions, and kofi/patreon
+ads, subscriptions, and ko-fi/patreon
 
 we could host it:
-for free -> (heroku, vercel)
+for free -> heroku, vercel
 or with money
