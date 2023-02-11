@@ -11,10 +11,7 @@
       "func_return": "number",
       "func_example": "Number(\"5\")",
       "func_language": "javascript",
-      "func_similars": {
-        "ToNumber": true,
-        "parseInt": true
-      },
+      "func_similars": ["ToNumber", "parseInt"],
       "func_sames": {
         "lua": "tonumber",
         "python": "int"
