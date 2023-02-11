@@ -1,4 +1,4 @@
-maindict = {
+main_dict = {
     "IO":{
         "opening a file":{
             "opening a file in byte read":{

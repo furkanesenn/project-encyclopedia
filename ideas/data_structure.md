@@ -52,3 +52,6 @@ Idk how fast this would be or would we even have problems with optimization
 we will also convert this to sql if I remember correctly
 
 I think we should just save these in (main dict and programming-languages, then convert them to sql data using an automated tool)
+
+Furkan also said that we should store how the code is ran (compiled, jit compiled, interpreted etc.)
+
