@@ -4,17 +4,511 @@
   "description": "A project to make things a little bit easier for programmers.",
   "authors": "Furkan 'violence' Esen, İhsan 'Notenlish' Çarkcı",
   "database-temporary": {
-    "Convert to Number": {
+    "Number": {
       "func_name": "Number",
-      "func_description": "Converts a string to a number.",
+      "func_description": "Converts a string/any data to a number.",
       "func_usage": "Number(string/data)",
       "func_return": "number",
       "func_example": "Number(\"5\")",
       "func_language": "javascript",
-      "func_similars": ["ToNumber", "parseInt"],
+      "func_similars": ["parseInt"],
       "func_sames": {
         "lua": "tonumber",
         "python": "int"
+      }
+    },
+    "String": {
+      "func_name": "String",
+      "func_description": "Converts a number/any data to a string.",
+      "func_usage": "String(number/data)",
+      "func_return": "string",
+      "func_example": "String(5)",
+      "func_language": "javascript",
+      "func_similars": ["toString", "Stringify"],
+      "func_sames": {
+        "lua": "tostring",
+        "python": "str"
+      }
+    },
+    "Boolean": {
+      "func_name": "Boolean",
+      "func_description": "Converts a string/any data to a boolean.",
+      "func_usage": "Boolean(string/data)",
+      "func_return": "boolean",
+      "func_example": "Boolean(\"true\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "bool"
+      }
+    },
+    "Array": {
+      "func_name": "Array",
+      "func_description": "Converts a string/any data to an array.",
+      "func_usage": "Array(string/data)",
+      "func_return": "array",
+      "func_example": "Array(\"[1, 2, 3]\")",
+      "func_language": "javascript",
+      "func_similars": ["Array.from"],
+      "func_sames": {
+        "lua": null,
+        "python": "list"
+      }
+    },
+    "Object": {
+      "func_name": "Object",
+      "func_description": "Converts a string/any data to an object.",
+      "func_usage": "Object(string/data)",
+      "func_return": "object",
+      "func_example": "Object(\"{a: 1, b: 2, c: 3}\")",
+      "func_language": "javascript",
+      "func_similars": ["JSON.parse"],
+      "func_sames": {
+        "lua": null,
+        "python": "dict"
+      }
+    },
+    "Set": {
+      "func_name": "Set",
+      "func_description": "Converts a string/any data to a set.",
+      "func_usage": "Set(string/data)",
+      "func_return": "set",
+      "func_example": "Set(\"{1, 2, 3}\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "set"
+      }
+    },
+    "Map": {
+      "func_name": "Map",
+      "func_description": "Converts a string/any data to a map.",
+      "func_usage": "Map(string/data)",
+      "func_return": "map",
+      "func_example": "Map(\"{a: 1, b: 2, c: 3}\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "dict"
+      }
+    },
+    "BigInt": {
+      "func_name": "BigInt",
+      "func_description": "Converts a string/any data to a big integer.",
+      "func_usage": "BigInt(string/data)",
+      "func_return": "bigint",
+      "func_example": "BigInt(\"123456789012345678901234567890\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "int"
+      }
+    },
+    "Symbol": {
+      "func_name": "Symbol",
+      "func_description": "Converts a string/any data to a symbol.",
+      "func_usage": "Symbol(string/data)",
+      "func_return": "symbol",
+      "func_example": "Symbol(\"a\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "str"
+      }
+    },
+    "Date": {
+      "func_name": "Date",
+      "func_description": "Converts a string/any data to a date.",
+      "func_usage": "Date(string/data)",
+      "func_return": "date",
+      "func_example": "Date(\"2020-01-01\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "datetime"
+      }
+    },
+    "Intl": {
+      "func_name": "Intl",
+      "func_description": "Converts a string/any data to an internationalization object.",
+      "func_usage": "Intl(string/data)",
+      "func_return": "intl",
+      "func_example": "Intl(\"en-US\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "locale"
+      }
+    },
+    "RegExp": {
+      "func_name": "RegExp",
+      "func_description": "Converts a string/any data to a regular expression.",
+      "func_usage": "RegExp(string/data)",
+      "func_return": "regexp",
+      "func_example": "RegExp(\"[a-z]\")",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "re"
+      }
+    },
+    "+": {
+      "func_name": "+",
+      "func_description": "Adds two numbers.",
+      "func_usage": "number1 + number2",
+      "func_return": "number",
+      "func_example": "5 + 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "+",
+        "python": "+"
+      }
+    },
+    "-": {
+      "func_name": "-",
+      "func_description": "Subtracts two numbers.",
+      "func_usage": "number1 - number2",
+      "func_return": "number",
+      "func_example": "5 - 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "-",
+        "python": "-"
+      }
+    },
+    "*": {
+      "func_name": "*",
+      "func_description": "Multiplies two numbers.",
+      "func_usage": "number1 * number2",
+      "func_return": "number",
+      "func_example": "5 * 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "*",
+        "python": "*"
+      }
+    },
+    "/": {
+      "func_name": "/",
+      "func_description": "Divides two numbers.",
+      "func_usage": "number1 / number2",
+      "func_return": "number",
+      "func_example": "5 / 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "/",
+        "python": "/"
+      }
+    },
+    "**": {
+      "func_name": "**",
+      "func_description": "Raises a number to the power of another number.",
+      "func_usage": "number1 ** number2",
+      "func_return": "number",
+      "func_example": "5 ** 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "^",
+        "python": "**"
+      }
+    },
+    "%": {
+      "func_name": "%",
+      "func_description": "Returns the remainder of two numbers.",
+      "func_usage": "number1 % number2",
+      "func_return": "number",
+      "func_example": "5 % 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "%",
+        "python": "%"
+      }
+    },
+    "++": {
+      "func_name": "++",
+      "func_description": "Increments a number by one.",
+      "func_usage": "number++",
+      "func_return": "number",
+      "func_example": "5++",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "number = number + 1",
+        "python": "+=1"
+      }
+    },
+    "--": {
+      "func_name": "--",
+      "func_description": "Decrements a number by one.",
+      "func_usage": "number--",
+      "func_return": "number",
+      "func_example": "5--",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "number = number - 1",
+        "python": "-=1"
+      }
+    },
+    "==": {
+      "func_name": "==",
+      "func_description": "Checks if two values are equal.",
+      "func_usage": "value1 == value2",
+      "func_return": "boolean",
+      "func_example": "5 == 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "==",
+        "python": "=="
+      }
+    },
+    "===": {
+      "func_name": "===",
+      "func_description": "Checks if two values are equal and of the same type.",
+      "func_usage": "value1 === value2",
+      "func_return": "boolean",
+      "func_example": "5 === 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "===",
+        "python": "is"
+      }
+    },
+    "!=": {
+      "func_name": "!=",
+      "func_description": "Checks if two values are not equal.",
+      "func_usage": "value1 != value2",
+      "func_return": "boolean",
+      "func_example": "5 != 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "~=",
+        "python": "!="
+      }
+    },
+    "!==": {
+      "func_name": "!==",
+      "func_description": "Checks if two values are not equal and of the same type.",
+      "func_usage": "value1 !== value2",
+      "func_return": "boolean",
+      "func_example": "5 !== 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "!==",
+        "python": "is not"
+      }
+    },
+    ">": {
+      "func_name": ">",
+      "func_description": "Checks if a value is greater than another value.",
+      "func_usage": "value1 > value2",
+      "func_return": "boolean",
+      "func_example": "5 > 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": ">",
+        "python": ">"
+      }
+    },
+    "<": {
+      "func_name": "<",
+      "func_description": "Checks if a value is less than another value.",
+      "func_usage": "value1 < value2",
+      "func_return": "boolean",
+      "func_example": "5 < 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "<",
+        "python": "<"
+      }
+    },
+    ">=": {
+      "func_name": ">=",
+      "func_description": "Checks if a value is greater than or equal to another value.",
+      "func_usage": "value1 >= value2",
+      "func_return": "boolean",
+      "func_example": "5 >= 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": ">=",
+        "python": ">="
+      }
+    },
+    "<=": {
+      "func_name": "<=",
+      "func_description": "Checks if a value is less than or equal to another value.",
+      "func_usage": "value1 <= value2",
+      "func_return": "boolean",
+      "func_example": "5 <= 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "<=",
+        "python": "<="
+      }
+    },
+    "&&": {
+      "func_name": "&&",
+      "func_description": "Checks if two values are true.",
+      "func_usage": "value1 && value2",
+      "func_return": "boolean",
+      "func_example": "5 && 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "and",
+        "python": "and"
+      }
+    },
+    "||": {
+      "func_name": "||",
+      "func_description": "Checks if one of two values is true.",
+      "func_usage": "value1 || value2",
+      "func_return": "boolean",
+      "func_example": "5 || 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "or",
+        "python": "or"
+      }
+    },
+    "!": {
+      "func_name": "!",
+      "func_description": "Checks if a value is false.",
+      "func_usage": "!value",
+      "func_return": "boolean",
+      "func_example": "!5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "not",
+        "python": "not"
+      }
+    },
+    "?:": {
+      "func_name": "?:",
+      "func_description": "Checks if a value is true and returns a value if it is, or another value if it is not.",
+      "func_usage": "value ? value1 : value2",
+      "func_return": "value1 or value2",
+      "func_example": "5 ? 5 : 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "value and value1 or value2",
+        "python": "value1 if value else value2"
+      }
+    },
+    "typeof": {
+      "func_name": "typeof",
+      "func_description": "Returns the type of a value.",
+      "func_usage": "typeof value",
+      "func_return": "string",
+      "func_example": "typeof 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "type(value)",
+        "python": "type(value)"
+      }
+    },
+    "instanceof": {
+      "func_name": "instanceof",
+      "func_description": "Checks if an object is an instance of a constructor.",
+      "func_usage": "object instanceof constructor",
+      "func_return": "boolean",
+      "func_example": "5 instanceof 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "value",
+        "python": "isinstance(value, constructor)"
+      }
+    },
+    "in": {
+      "func_name": "in",
+      "func_description": "Checks if a property is in an object.",
+      "func_usage": "property in object",
+      "func_return": "boolean",
+      "func_example": "5 in 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "value",
+        "python": "value in object"
+      }
+    },
+    "new": {
+      "func_name": "new",
+      "func_description": "Creates a new instance of a constructor.",
+      "func_usage": "new constructor",
+      "func_return": "object",
+      "func_example": "new 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": null
+      }
+    },
+    "delete": {
+      "func_name": "delete",
+      "func_description": "Deletes a property from an object.",
+      "func_usage": "delete object.property",
+      "func_return": "boolean",
+      "func_example": "delete 5.property",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": null,
+        "python": "del"
+      }
+    },
+    "function name() {}": {
+      "func_name": "function",
+      "func_description": "Creates a function.",
+      "func_usage": "function name() { }",
+      "func_return": "function",
+      "func_example": "function name() { }",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "function name() end",
+        "python": "def name():"
+      }
+    },
+    "return": {
+      "func_name": "return",
+      "func_description": "Returns a value from a function.",
+      "func_usage": "return value",
+      "func_return": "value",
+      "func_example": "return 5",
+      "func_language": "javascript",
+      "func_similars": [""],
+      "func_sames": {
+        "lua": "return",
+        "python": "return"
       }
     }
   }
