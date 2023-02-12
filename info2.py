@@ -92,45 +92,91 @@ main_dict = {
     "classes":{
     },
     "operators":{
-        "addition":{
-            "int int":{},
-            "int float":{},
-            "float float":{},
-            "list list":{},
-            "list {item}":{},
+        "arithmetic":{
+            "addition":{
+                "int int":{},
+                "int float":{},
+                "float float":{},
+                "list list":{},
+                "list {item}":{},
+            },
+            "subtraction":{
+                "int int":{},
+                "int float":{},
+                "float float":{},
+                "list list":{},
+                "list {item}":{},
+            },
+            "multiplication":{
+                "int int":{},
+                "int float":{},
+                "float float":{},
+                "list/array int":{},
+            },
+            "division":{
+                "int int":{},
+                "int float":{},
+                "float float":{},
+            },
+            "modulus":{
+                "int int":{},
+                "int float":{},
+                "float float":{},
+            },
+            "exponentiation":{
+                "int int":{},
+                "int float":{},
+            },
+            "floor division":{
+                "int int":{},
+                "int float":{},
+                "float float":{},
+            }
         },
-        "subtraction":{
-            "int int":{},
-            "int float":{},
-            "float float":{},
-            "list list":{},
-            "list {item}":{},
+        "assignment":{
+            "=":{},
+            "+=":{},
+            "-=":{},
+            "*=":{},
+            "/=":{},
+            "%=":{},
+            "//=":{},
+            "**=":{},
+            "&=":{},
+            "|=":{},
+            "^=":{},
+            ">>=":{},
+            "<<=":{},
         },
-        "multiplication":{
-            "int int":{},
-            "int float":{},
-            "float float":{},
-            "list/array int":{},
+        "comparison":{
+            "==":{},
+            "!=":{},
+            ">":{},
+            "<":{},
+            ">=":{},
+            "<=":{},
         },
-        "division":{
-            "int int":{},
-            "int float":{},
-            "float float":{},
+        "logical":{
+            "and":{},
+            "or":{},
+            "not":{},
         },
-        "modulus":{
-            "int int":{},
-            "int float":{},
-            "float float":{},
+        "identity":{ # if its the same object
+            "is":{},
+            "is not":{},
         },
-        "exponentiation":{
-            "int int":{},
-            "int float":{},
+        "membership":{
+            "in":{},
+            "not in":{},
         },
-        "floor division":{
-            "int int":{},
-            "int float":{},
-            "float float":{},
-        }
+        "bitwise":{
+            "AND":{},
+            "OR":{},
+            "XOR":{},
+            "NOT":{},
+            "ZERO FILL LEFT SHIFT":{},
+            "SIGNED RIGHT SHIFT":{},
+        },
     },
     "exception handling":{
         "try except":{},
