@@ -202,22 +202,19 @@ py_dict = {
         "opening a file":{
             "opening a file in byte read":{
                 "code":"""with open("file.txt", "rb") as file:
-    data = file.read()
-                """,
+    data = file.read()""",
                 "modules":[],
                 # TODO: we also need to add optional arguments of functions too!
             },
             "opening a file in text read":{
                 "code":"""with open("file.txt", "r") as file:
-    data = file.read()
-                """,
+    data = file.read()""",
                 "modules":[],
             },
             "opening a json file":{
                 "code":"""import json
 with open("file.txt", "rb") as file:
-    data = json.load(file)
-                """,
+    data = json.load(file)""",
                 "modules":["json"],
             },  # Also I think there was a mode that let you do bot things at once im not sure
         },
@@ -225,23 +222,20 @@ with open("file.txt", "rb") as file:
             "writing a file in byte write":{
                 "code":"""data = bytes("hello world!", encoding="utf-8")
 with open("file.txt", "wb") as file:
-    file.write(data)
-                """,
+    file.write(data)""",
                 "modules":[],
             },
             "writing to a file in text write":{
                 "code":"""data = "hello world!"
 with open("file.txt", "w") as file:
-    file.write(data)
-                """,
+    file.write(data)""",
                 "modules":[],
             },
             "writing to a json file":{
                 "code":"""import json
                 data = {"hello":"world!"}
 with open("file.txt", "w") as file:
-    json.dump(data, file)
-                """,
+    json.dump(data, file)""",
                 "modules":["json"],
             }
         }
@@ -250,18 +244,69 @@ with open("file.txt", "w") as file:
 
     },
     "loops":{
-        "While":{},
-        "for":{}  # maybe change it to 2 different for's, for range and for item 
+        "While":{
+            "condition":{
+                "code":"""a = 10
+b = 10
+while a == b:
+    print("Printing because a is equal to b")"""
+            },
+            "simple":{  # Idk what to name this
+                "code":"""while True:
+    print("I will print this unless you break out of this loop")
+    """
+            }
+        },
+        "for":{
+            "index from length":{
+                "code":"""data = [10, 20, 30, 40]
+for index in range(len(data)-1):
+    print(f"index:{index} data:{data[index]}")
+    # f"" allows us to format our string"""
+            },
+            "key from dict":{
+                "code":"""dict = {"alex":24, "john":42, "mustafa":33}  # ages of people
+for key in dict.keys():
+    print(key)
+                """
+            },
+            "value from dict":{
+                "code":"""dict = {"alex":24, "john":42, "mustafa":33}  # ages of people
+for value in dict.values():
+    print(value)
+                """
+            },
+            "key and value from dict":{
+                "code":"""dict = {"alex":24, "john":42, "mustafa":33}  # ages of people
+for key, value in dict.items():
+    print(key, value)
+                """
+            },
+            "item from list":{
+                "code":"""list = ["apple", "orange", "banana"]
+for item in list:
+    print(item)
+                """
+            },
+            
+        }  # maybe change it to 2 different for's, for range and for item 
     },
     "datatypes":{
         "mutable strings":{
-
+            "str":{  # Idk what to put here other than this
+                "code":"""name="Mary"
+                print(name)
+                """
+            }
         },
-        "immutable strings":{
-
+        "immutable strings":{  # Idk what to put here, this is python
         },
         "char":{
-
+            "chr":{
+                "code":"""character = chr(65)
+print(character)
+# A"""
+            }
         },
         "integers":{
             "signed":{
