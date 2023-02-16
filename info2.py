@@ -102,7 +102,11 @@ main_dict = {
     "operators":{
         "arithmetic":{
             "addition":{
-                "int int":{},
+                "int int":{
+                    "func_name":"addition of two integers",
+                    "func_description":"adds two integers together",
+                    "func_similiars":["addition of two integers", "addition of two numbers", "add 2 number", "add 2 numbers", "addition", "add"],
+                },
                 "int float":{},
                 "float float":{},
                 "list list":{},
@@ -594,7 +598,190 @@ print(character)
         },
     },
     "classes":{
+        "basic":{
+            "code":"""class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def print_name(self):
+        print(self.name)
+    def print_age(self):
+        print(self.age)
+person = Person("Alex", 24)
+person.print_name()
+person.print_age()
+"""
+        },
+        "repr":{
+            "code":"""class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def __repr__(self) -> str:
+        return f"Person({self.name}, {self.age})"
+person = Person("Alex", 24)
+print(person)
+""",
+            "func_name":"__repr__",
+            "func_type":"dunder",
+            "func_description":"Returns a string representation of the object, for developers.",
+            "func_return":"str",
+            "func_args":"self",
+            "func_kwargs":"None",
+        },
+        "str":{
+            "code":"""class Person:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    def __str__(self) -> str:
+        return f"Name: {self.name}, Age: {self.age}"
+person = Person("Alex", 24)
+print(person)
+""",
+            "func_name":"__str__",
+            "func_type":"dunder",
+            "func_description":"Returns a string representation of the object, for users.",
+            "func_return":"str",
+            "func_args":"self",
+            "func_kwargs":"None",
+        },
+        # difference between repr and str is that repr is for developers and str is for users
     },
+    "modules":{
+        "module importing":{
+        "import":{
+            "code":"""import math
+print(math.pi)
+""",
+            "func_name":"import",
+            "func_type":"builtin",
+            "func_description":"Imports a module.",
+            "func_return":"None",
+            "func_args":"module",
+            "func_kwargs":"None",
+        },
+        "from import":{
+            "code":"""from math import pi
+print(pi)
+""",
+            "func_name":"from import",
+            "func_type":"builtin",
+            "func_description":"Imports a module.",
+            "func_return":"None",
+            "func_args":"module",
+            "func_kwargs":"None",
+        },
+        "from import as":{
+            "code":"""from math import pi as p
+print(p)
+""",
+            "func_name":"from import as",
+            "func_type":"builtin",
+            "func_description":"Imports a module.",
+            "func_return":"None",
+            "func_args":"module",
+            "func_kwargs":"None",
+        },
+        "import as":{
+            "code":"""import math as m
+print(m.pi)
+""",
+            "func_name":"import as",
+            "func_type":"builtin",
+            "func_description":"Imports a module.",
+            "func_return":"None",
+            "func_args":"module",
+            "func_kwargs":"None",
+        },
+        "import *":{
+            "code":"""from math import *
+print(pi)   
+""",
+            "func_name":"import *",
+            "func_type":"builtin",
+            "func_description":"Imports a module.",
+            "func_return":"None",
+            "func_args":"module",
+            "func_kwargs":"None",
+        },
+        },
+        "modules":{
+            "types":{
+                "built-in":{
+                },
+                "third-party":{
+                    "math":{},
+                    "AI":{},
+                    "GameDev":{
+                        "pygame":{},
+                        "pyglet":{},
+                        "pyqt":{},
+                        "tkinter":{},
+                        "kivy":{},
+                        "panda3d":{},
+                    },
+                    "web":{
+                        "flask":{},
+                        "django":{},
+                        "bottle":{},
+                        "tornado":{},
+                        "web2py":{},
+                        "pyramid":{},
+                    },
+                    "data":{
+                        "numpy":{},
+                        "pandas":{},
+                        "matplotlib":{},
+                        "seaborn":{},
+                        "scipy":{},
+                        "scikit-learn":{},
+                    },
+                    "image processing":{
+                        "opencv":{},
+                        "pillow":{},
+                        "scikit-image":{},
+                    },
+                    "audio":{
+                        "pyaudio":{},
+                        "pydub":{},
+                        "pygame":{},
+                        "pyglet":{},
+                        "pyqt":{},
+                        "tkinter":{},
+                        "kivy":{},
+                        "panda3d":{},
+                    },
+                    "database":{
+                        "sqlite3":{},
+                        "mysql":{},
+                        "postgresql":{},
+                        "mongodb":{},
+                        "redis":{},
+                    },
+                    "networking":{
+                        "socket":{},
+                        "requests":{},
+                        "urllib":{},
+                        "urllib2":{},
+                        "urllib3":{},
+                        "selenium":{},
+                        "beautifulsoup":{},
+                        "lxml":{},
+                        "scrapy":{},
+                    },
+                    "web scraping":{
+                        "selenium":{},
+                        "beautifulsoup":{},
+                        "lxml":{},
+                        "scrapy":{},
+                    },
+                }
+    },
+                "user-defined":{
+                },
+            }
+        },
     "operators":{
         "arithmetic":{
             "addition":{
@@ -685,8 +872,6 @@ print(character)
     "exception handling":{
         "try except":{},
         "try except finally":{},
-        "rust Option":{},
-        "rust Result":{},
     },
     "memory management":{ # Im not sure if this should be allocating and deallocating or Heap/Stack
         "allocation":{
